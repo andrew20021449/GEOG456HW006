@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        position:absolute;
+    }
+</style>
+<body>
+    <input type="range" min="0" max="2" value="0" step="1" orient="vertical" oninput="scroller(this.value)">
+    <img id='x2003' src="2003.png" alt="" width="400px">
+    <img id='x2009' src="2009.PNG" alt="" width="400px">
+    <img id='x2014' src="2014.PNG" alt="" width="400px">
+    <script>
+        var x2014 = document.getElementById('x2014')
+        function scroller(value){
+            x2014.style.opacity = value;
+        }
+    </script>
+</html>
