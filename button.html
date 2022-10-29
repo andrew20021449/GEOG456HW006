@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        position: absolute;
+        width: 400px;
+    }
+    button{
+        position: absolute;
+        top: 400px;
+    }
+</style>
+<body>
+    <img id='x2003' src="2003.png" alt="">
+    <img id='x2009' src="2009.PNG" alt="">
+    <img id='x2014' src="2014.PNG" alt="">
+    <button onclick="funcButton()">Click Me!</button>
+</body>
+<script>
+    var x2003 = document.getElementById('x2003');
+    var x2009 = document.getElementById('x2009');
+    var x2014 = document.getElementById('x2014');
+    var x2003begin = true;
+    function funcButton(){
+        if (x2003begin) {
+            x2003.style.visibility = 'hidden';
+            x2003begin = false;
+        }
+        else {
+            x2003.style.visibility = 'visible';
+            x2003begin = true; 
+        }
+    }
+</script>
+</html>
