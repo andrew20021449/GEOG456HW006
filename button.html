@@ -9,7 +9,7 @@
 <style>
     img{
         position: absolute;
-        width: 400px;
+        width: 800px;
     }
     button{
         position: absolute;
@@ -17,25 +17,22 @@
     }
 </style>
 <body>
-    <img id='x2003' src="2003.png" alt="">
-    <img id='x2009' src="2009.PNG" alt="">
     <img id='x2014' src="2014.PNG" alt="">
-    <button onclick="funcButton()">Click Me!</button>
+    <img id='x2009' src="2009.PNG" alt="">
+    <img id='x2003' src="2003.png" alt="">
+
+    <button style="left:10px" onclick="funcButton('x2003')">2003</button>
+    <button style="left:60px" onclick="funcButton('x2009')">2009</button>
+    <button style="left:110px" onclick="funcButton('x2014')">2014</button>
 </body>
 <script>
-    var x2003 = document.getElementById('x2003');
-    var x2009 = document.getElementById('x2009');
-    var x2014 = document.getElementById('x2014');
-    var x2003begin = true;
-    function funcButton(){
-        if (x2003begin) {
-            x2003.style.visibility = 'hidden';
-            x2003begin = false;
+    function funcButton(id){
+        var imgs = document.getElementsByTagName('img')
+        var daImg = document.getElementById(id)
+        for(var i=0; i <imgs.length; i++){
+            imgs[i].style.visibility='hidden'
         }
-        else {
-            x2003.style.visibility = 'visible';
-            x2003begin = true; 
-        }
+        daImg.style.visibility = 'visible'
     }
 </script>
 </html>
